@@ -1,0 +1,15 @@
+GeneratorModel for yakindu::java {
+
+	statechart counter {
+
+		feature Outlet {
+			targetProject = "TimerProjektor"
+			targetFolder = "yakindu"
+			apiTargetFolder = "yakindu"
+			libraryTargetFolder = "src"
+		}
+		feature GeneralFeatures{
+			TimerService = true
+		}
+	}
+}
