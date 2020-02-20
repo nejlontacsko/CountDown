@@ -41,25 +41,25 @@ public class Clock
         	@Override
         	public void run() {
 	        	while (true) {
-					SwingUtilities.invokeLater(new Runnable() {
-						@Override
-						public void run() {
-							label.setText(getTimeString());
-							sm.runCycle();
-						}
-					});
-	
-					try {
-						Thread.sleep(100);
-					} catch (InterruptedException ex) {
-						break;
+				SwingUtilities.invokeLater(new Runnable() {
+					@Override
+					public void run() {
+						label.setText(getTimeString());
+						sm.runCycle();
 					}
+				});
+
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException ex) {
+					break;
 				}
+			}
         	}
 		});
-        t.setName("Updater");
-        t.setDaemon(true);
-        t.start();
+        	t.setName("Updater");
+        	t.setDaemon(true);
+        	t.start();
 	}
 	
 	public void Incr(int i)
